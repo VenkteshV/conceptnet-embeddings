@@ -87,10 +87,15 @@ if __name__ == "__main__":
     word1 = standardized_uri('en', 'electricity')
 
     word2 = standardized_uri('en', 'Ohm\'s law')
-    vector1 = numberbatch[word1]
-    vector2 = numberbatch[word2]
-    vector3 = numberbatch[word]
-    print("similarity score", np.dot(vector1, vector2))
-    print("\n\nsimilarity score", np.dot(vector3,vector2))
-    print("\n\nsimilarity score", np.dot(vector3,vector1))
+    word3 = standardized_uri('en', 'Hooke\'s law')
 
+    # vector1 = numberbatch[word1]
+    # vector2 = numberbatch[word2]
+    # vector3 = numberbatch[word]
+    # print("similarity score", np.dot(vector1, vector2))
+    # print("\n\nsimilarity score", np.dot(vector3,vector2))
+    # print("\n\nsimilarity score", np.dot(vector3,vector1))
+
+
+    print("most similar phrases example", numberbatch.most_similar(word2))
+    print("most similar phrases example", numberbatch.most_similar(word3))
